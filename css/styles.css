@@ -109,7 +109,6 @@ header{
   display: -webkit-flex;
   display: -ms-flex;
   display: flex;
-  justify-content: center;
 }
 .timerText li{
   margin-right: 5px;
@@ -530,6 +529,9 @@ footer{
   }
   .timer{
     text-align: center;
+  }
+  .timerText{
+    justify-content: center;
   }
   .swrvskyLogo{
     order:1;
