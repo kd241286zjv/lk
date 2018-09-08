@@ -1,0 +1,551 @@
+@font-face {
+    font-family: 'museo_black';
+    src: url('fonts/museosansblack-webfont.eot');
+    src: url('fonts/museosansblack-webfont.eot?#iefix') format('embedded-opentype'),
+         url('fonts/museosansblack-webfont.woff2') format('woff2'),
+         url('fonts/museosansblack-webfont.woff') format('woff'),
+         url('fonts/museosansblack-webfont.svg#museo_sans_cyrl900') format('svg');
+    font-weight: normal;
+    font-style: normal;
+}
+@font-face {
+    font-family: 'museo_medium';
+    src: url('fonts/museosansmedium-webfont.eot');
+    src: url('fonts/museosansmedium-webfont.eot?#iefix') format('embedded-opentype'),
+         url('fonts/museosansmedium-webfont.woff2') format('woff2'),
+         url('fonts/museosansmedium-webfont.woff') format('woff'),
+         url('fonts/museosansmedium-webfont.svg#museo_sans_cyrl500') format('svg');
+    font-weight: normal;
+    font-style: normal;
+}
+@font-face {
+    font-family: 'museo_regular';
+    src: url('fonts/museosansregular-webfont.eot');
+    src: url('fonts/museosansregular-webfont.eot?#iefix') format('embedded-opentype'),
+         url('fonts/museosansregular-webfont.woff2') format('woff2'),
+         url('fonts/museosansregular-webfont.woff') format('woff'),
+         url('fonts/museosansregular-webfont.svg#museo_sans_cyrl300') format('svg');
+    font-weight: normal;
+    font-style: normal;
+}
+
+/********GENERAL********/
+body{
+  font-size: 16px;
+  font-family: 'museo_medium';
+  color: #fff;
+}
+ul{
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+a{
+  color: inherit;
+  text-decoration: none;
+}
+a:focus, input:focus, button:focus{
+  outline:none;
+}
+a:hover{
+  text-decoration: none;
+  color: inherit;
+}
+p{
+  margin: 0;
+}
+
+/********HEADER********/
+header{
+  background-image: url(../img/mainBg.jpg);
+  background-size:cover;
+  background-position: center center;
+  padding: 50px 0;
+  color: #f5f5f5;
+  overflow: hidden;
+}
+.logo{
+  display: -webkit-flex;
+  display: -ms-flex;
+  display: flex;
+}
+.logo>*{
+  width: 50%;
+  height: 80px;
+  display: -webkit-flex;
+  display: -ms-flex;
+  display: flex;
+  justify-content: center;
+  -ms-align-items: center;
+  align-items: center;
+  padding: 0 20px;
+}
+.logo>* img{
+  max-width: 100%;
+}
+.logoLeft{
+  background-color: #000;
+}
+.logoRight{
+  background-color: #f5f5f5;
+}
+.logoColumn{
+  display: -webkit-flex;
+  display: -ms-flex;
+  display: flex;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  justify-content: space-between;
+}
+.timer{
+  color: #f5f5f5;
+}
+.timerAnnounce{
+  font-size: 12px;
+}
+.timerText{
+  font-size: 25px;
+  display: -webkit-flex;
+  display: -ms-flex;
+  display: flex;
+  justify-content: center;
+}
+.timerText li{
+  margin-right: 5px;
+}
+.logo{
+  margin-bottom: 50px;
+}
+.accountColumnWrap{
+  display: -webkit-flex;
+  display: -ms-flex;
+  display: flex;
+  -ms-align-items: flex-start;
+  align-items: flex-start;
+}
+.loggedUser{
+  display: -webkit-flex;
+  display: -ms-flex;
+  display: flex;
+  -ms-align-items: center;
+  align-items: center;
+  cursor: pointer;
+  font-size: 15px;
+  position: relative;
+}
+.loggedUser svg{
+  fill:#f5f5f5;
+  width: 8px;
+  height: auto;
+  margin-left: 10px;
+  -webkit-transition: .3s all ease;
+  -o-transition: .3s all ease;
+  transition: .3s all ease;
+  font-size: 15px;
+}
+.loggedUser:hover svg{
+  fill:#991010;
+  -webkit-transition: .3s all ease;
+  -o-transition: .3s all ease;
+  transition: .3s all ease;
+}
+.logout svg{
+  fill:#f5f5f5;
+  width: 12px;
+  margin-right: 8px;
+  transform:scale(-1, 1);
+}
+.logout{
+  display: -webkit-flex;
+  display: -ms-flex;
+  display: flex;
+  -ms-align-items: center;
+  align-items: center;
+  justify-content: center;
+  font-size: 12px;
+  border: 1px solid #f5f5f5;
+  width: 100px;
+  height: 40px;
+  -webkit-transition: .3s all ease;
+  -o-transition: .3s all ease;
+  transition: .3s all ease;
+}
+.logout:hover{
+  border-color: #991010;
+  -webkit-transition: .3s all ease;
+  -o-transition: .3s all ease;
+  transition: .3s all ease;
+}
+.accountColumn{
+  display: -webkit-flex;
+  display: -ms-flex;
+  display: flex;
+  -ms-align-items: center;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+}
+.loggedUserMenu{
+  position: absolute;
+  display: none;
+  right: 0;
+  width: 90%;
+  background-color: #fff;
+  top: 25px;
+  z-index: 2;
+}
+.loggedUserMenu ul{
+  padding: 20px;
+}
+.loggedUserMenu ul li{
+  color: #000;
+  font-family: 'museo_medium';
+  font-size: 13px;
+  cursor: pointer;
+  -webkit-transition: .3s all ease;
+  -o-transition: .3s all ease;
+  transition: .3s all ease;
+}
+.loggedUserMenu ul li:hover{
+  color: #991010;
+  -webkit-transition: .3s all ease;
+  -o-transition: .3s all ease;
+  transition: .3s all ease;
+}
+.loggedUser-clicked svg{
+  transform:scale(1,-1);
+  fill:#991010;
+  -webkit-transition: .3s all ease;
+  -o-transition: .3s all ease;
+  transition: .3s all ease;
+}
+.swrvskyLogo{
+  display: -webkit-flex;
+  display: -ms-flex;
+  display: flex;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  justify-content: flex-end;
+  -ms-align-items: flex-start;
+  align-items: flex-start;
+  position: relative;
+}
+.swrvskyLogo p{
+  font-family: 'museo_black';
+  font-size: 80px;
+  text-transform: uppercase;
+  line-height: 1;
+  z-index: 1;
+}
+.swrvskyLogo img{
+  margin-bottom: 10px;
+  z-index: 1;
+}
+.logoSquare{
+  position: absolute;
+  left: calc(50% - 162px);
+  height: 400px;
+  width: 120%;
+  bottom: 40px;
+  background-color: #991010;
+  opacity: .5;
+  z-index: 0;
+  filter:brightness(50%);
+}
+
+/********BODY********/
+.taskSection{
+  background-color: #fff;
+  color: #000;
+}
+.taskBlock{
+  padding-top: 100px;
+  padding-bottom: 100px;
+  display: none;
+}
+.taskHeader{
+  font-size: 40px;
+  font-family: 'museo_regular';
+  position: relative;
+  display: inline-block;
+  margin-bottom: 30px;
+}
+.taskHeader:after{
+  font-size: 12px;
+  content:'Не выполнено';
+  position: relative;
+  opacity: .25;
+  position: absolute;
+  bottom: 5px;
+  right: -125px;
+}
+.taskBody p{
+  padding-left: 10%;
+  font-family: 'museo_regular';
+  font-size: 15px;
+  margin-bottom: 30px;
+}
+.taskBody a{
+  width: 200px;
+  height: 46px;
+  display: -webkit-flex;
+  display: -ms-flex;
+  display: flex;
+  justify-content: center;
+  -ms-align-items: center;
+  align-items: center;
+  text-transform: uppercase;
+  border: 3px solid #991010;
+  -webkit-transition: .3s all ease;
+  -o-transition: .3s all ease;
+  transition: .3s all ease;
+}
+.taskBody a:hover{
+  background-color: #991010;
+  color: #f5f5f5;
+  -webkit-transition: .3s all ease;
+  -o-transition: .3s all ease;
+  transition: .3s all ease;
+}
+.taskMenu{
+  display: -webkit-flex;
+  display: -ms-flex;
+  display: flex;
+}
+.taskMenu ul{
+  display: -webkit-flex;
+  display: -ms-flex;
+  display: flex;
+  flex-grow:1;
+}
+.taskMenu ul li{
+  display: -webkit-flex;
+  display: -ms-flex;
+  display: flex;
+  justify-content: center;
+  -ms-align-items: center;
+  align-items: center;
+  height: 90px;
+  width: calc(100% / 9);
+  background-color: #f5f5f5;
+  cursor:pointer;
+  font-size: 25px;
+  -webkit-transition: .3s all ease;
+  -o-transition: .3s all ease;
+  transition: .3s all ease;
+}
+.taskMenu ul li:hover{
+  color: #901010;
+  -webkit-transition: .3s all ease;
+  -o-transition: .3s all ease;
+  transition: .3s all ease;
+}
+.taskMenu ul li.succeedTask{
+  color: #f5f5f5;
+  background-color: #000;
+  -webkit-transition: .3s all ease;
+  -o-transition: .3s all ease;
+  transition: .3s all ease;
+}
+.taskMenu ul li.activeTask{
+  color: #f5f5f5;
+  background-color: #991010;
+  -webkit-transition: .3s all ease;
+  -o-transition: .3s all ease;
+  transition: .3s all ease;
+}
+.taskImg{
+  width: 30%;
+  position: relative;
+}
+.taskImg img{
+  max-width: 100%;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+}
+.taskBlock-active{
+  display: block;
+}
+
+/********FOOTER********/
+footer{
+  background-color: #000;
+  padding: 100px 0;
+  font-family: 'museo_regular';
+  font-size: 12px;
+  color: #f5f5f5;
+}
+.faq li{
+  margin-bottom: 10px;
+}
+.faq a{
+  -webkit-transition: .3s all ease;
+  -o-transition: .3s all ease;
+  transition: .3s all ease;
+}
+.faq a:hover{
+  color: #991010;
+  -webkit-transition: .3s all ease;
+  -o-transition: .3s all ease;
+  transition: .3s all ease;
+}
+.footerSocials{
+  width: 100%;
+  display: -webkit-flex;
+  display: -ms-flex;
+  display: flex;
+  justify-content: space-around;
+}
+.footerSocials a{
+  display: block;
+  width: 35px;
+  height: 35px;
+  display: -webkit-flex;
+  display: -ms-flex;
+  display: flex;
+  justify-content: center;
+  -ms-align-items: center;
+  align-items: center;
+  padding: 5px;
+  background-color: #f5f5f5;
+  -webkit-transition: .3s all ease;
+  -o-transition: .3s all ease;
+  transition: .3s all ease;
+}
+.footerSocials a:hover{
+  background-color: #991010;
+  -webkit-transition: .3s all ease;
+  -o-transition: .3s all ease;
+  transition: .3s all ease;
+}
+
+
+/********MEDIA********/
+@media(max-width: 1199px){
+  .logoSquare{
+    left: calc(50% - 170px);
+    width: 100%;
+  }
+}
+@media(max-width: 991px){
+  .swrvskyLogo p{
+    font-size: 60px;
+  }
+  .swrvskyLogo img{
+    max-width: 140px;
+  }
+  .logoSquare{
+    left: 0;
+    bottom: 30px;
+  }
+  .loggedUser{
+    font-size: 10px;
+  }
+  .logout{
+    width: 80px;
+  }
+  .taskBlock, footer{
+    padding-top: 75px;
+    padding-bottom: 75px;
+  }
+  .loggedUserMenu{
+    width: 150px;
+  }
+  .loggedUserMenu ul{
+    padding: 10px;
+  }
+}
+@media(max-width: 767px){
+  .taskImg{
+    display: none;
+  }
+  .logo{
+    -webkit-flex-direction: column;
+    -ms-flex-direction: column;
+    flex-direction: column;
+  }
+  .logo>*{
+    width: 100%;
+    height: 60px;
+  }
+  .accountColumn{
+    -webkit-flex-direction: column;
+    -ms-flex-direction: column;
+    flex-direction: column;
+  }
+  .loggedUser{
+    order:2;
+  }
+  header{
+    padding: 25px 0;
+  }
+  .timerText{
+    font-size: 20px;
+  }
+  .logout{
+    width: 100%;
+  }
+  .loggedUser{
+    margin-top: 20px;
+    font-size: 12px;
+  }
+  .swrvskyLogo img{
+    max-width: 100px;
+  }
+  .swrvskyLogo p{
+    font-size: 45px;
+  }
+  .logo{
+    margin-bottom: 25px;
+  }
+  .taskMenu ul li{
+    height: 60px;
+  }
+  .taskBlock, footer{
+    padding-top: 25px;
+    padding-bottom: 25px;
+  }
+  .taskHeader{
+    font-size: 30px;
+  }
+  .taskBody p{
+    font-size: 13px;
+  }
+}
+@media(max-width: 575px){
+  .logoSquare{
+    display: none;
+  }
+  .logo{
+    -webkit-flex-direction: row;
+    -ms-flex-direction: row;
+    flex-direction: row;
+  }
+  .logo>*{
+    width: 50%;
+    padding: 20px;
+  }
+  .timer{
+    text-align: center;
+  }
+  .swrvskyLogo{
+    order:1;
+  }
+  .accountColumnWrap{
+    order:2;
+  }
+  .logoColumn{
+    order:3;
+    margin-top: 15px;
+  }
+  .loggedUser{
+    margin-top: 15px;
+  }
+  .taskMenu ul li{
+    height: 50px;
+    font-size: 18px;
+  }
+}
