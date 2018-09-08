@@ -12,4 +12,15 @@ $(document).ready(function(){
      /* действие после завершения таймера */
      alert("Время истекло!");
   });
+
+  $('.taskMenu li').click(function(){
+    var blockClass = $(this).attr('data-task');
+    if($(this).prev().hasClass('succeedTask') || $(this).is(':first-child')){
+      $('.taskBlock-active').fadeOut('', function(){
+        $(this).removeClass('taskBlock-active');
+        $('.taskBlock' + blockClass).fadeIn('');
+        $('.taskBlock' + blockClass).addClass('taskBlock-active');
+      });
+    }
+  });
 });
